@@ -1,4 +1,4 @@
-module github.com/JingIsCoding/redis-lock
+module github.com/JingIsCoding/redislock
 
 go 1.21.5
 
