@@ -81,11 +81,11 @@ func (c *CustomLogger) Error(_ string, _ ...interface{}) {
 
 func main() {
 	option := redislock.DefaultOption
-    option.MaxActive = 500
+    	option.MaxActive = 500
 	option.MaxQueueSize = 10
 	option.Logger = &CustomLogger{}
 
-	manager, err := redislock.NewLockManager("localhost:6379")
+	manager, err := redislock.NewLockManager("localhost:6379", option)
 	if err != nil {
 		log.Panicln(err)
 	}
